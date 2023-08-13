@@ -8,7 +8,8 @@ const Header = () => {
     return (
     <Navbar dark color='black' sticky='top' expand='md'>
         <NavbarBrand href='/'>
-            <img src={TeamLogo} alt='Team Logo' />
+            <img src={TeamLogo} className='float-start' alt='Team Logo' />
+            <h1 className='mt-2'>Team Tools</h1>
         </NavbarBrand>
     </Navbar>);
 };

@@ -1,6 +1,6 @@
 import { Button, Card, CardHeader, CardBody, CardImg, CardText, CardTitle} from 'reactstrap';
 
-const TeamToolCard = ({tool}) => {
+const ToolCard = ({tool}) => {
     const { name, image, title, description } = tool
     return(
         <Card>
@@ -15,4 +15,4 @@ const TeamToolCard = ({tool}) => {
     );
 };
 
-export default TeamToolCard;
+export default ToolCard;

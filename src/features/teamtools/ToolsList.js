@@ -1,16 +1,16 @@
 import { selectAllTools } from './toolsSlice';
 import { Col, Row } from 'reactstrap';
-import TeamToolCard from './TeamToolCard';
+import ToolCard from './ToolCard';
 
-const TeamToolsList = () => {
+const ToolsList = () => {
     const tools = selectAllTools();
     
     return (
         <Row className='ms-auto'>
             {tools.map((tool) => {
                 return (
-                    <Col md='3' xs='8' className='m-4' key={tool.id}>
-                        <TeamToolCard tool={tool} />
+                    <Col lg='3' md='4' xs='6' className='m-3' key={tool.id}>
+                        <ToolCard tool={tool} />
                     </Col>
                 );
             })};
@@ -18,4 +18,4 @@ const TeamToolsList = () => {
     );
 };
 
-export default TeamToolsList;
+export default ToolsList;

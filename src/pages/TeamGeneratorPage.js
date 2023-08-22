@@ -1,44 +1,36 @@
 import React, { useState } from "react";
-import TeamMember from "../features/TeamGenerator/TeamMember"
+// import TeamMember from "../features/TeamGenerator/TeamMember"
+import MemberList from "../features/TeamGenerator/MemberList";
 import TeamMemberForm from "../features/TeamGenerator/TeamMemberForm";
 import { nanoid } from "nanoid";
 
-const TeamGeneratorPage = (props) => {
-    const [members, setMembers] = useState(props.members);
-
-    const memberList = members.map((member) => <TeamMember
-        id={member.id}
-        name={member.name}
-        key={member.id}
-        removeMember={removeMember}
-    />);
-
-    const membersNoun = memberList.length !== 1 ? 'players' : 'player'; 
-
-    const membersText = `${memberList.length} ${membersNoun} added:`;
+const TeamGeneratorPage = ({ members }) => {
+    const [currentMembers, setCurrentMembers] = useState(members);
 
     function addMember(name) {
         const newMember = { 
             id: `member-${nanoid()}`,
             name 
         };
-        setMembers([...members, newMember]);
+        console.log(newMember);
+        setCurrentMembers([...currentMembers, newMember]);
     }
 
     function removeMember(id) {
-        const remainingMembers = members.filter((member) => id !== member.id);
-        setMembers(remainingMembers);
+        const remainingMembers = currentMembers.filter((member) => id !== member.id);
+        setCurrentMembers(remainingMembers);
     }
 
     return(
         <>
             <TeamMemberForm addMember={addMember} />
-            <h2>{membersText}</h2>
             <ul
                 className='teamMember-list ml-2'
                 aria-labelledby='list-heading'
             >
-            {memberList}
+            <MemberList 
+                currentMembers={currentMembers} removeMember={removeMember}
+            />
             </ul>
         </>
     );

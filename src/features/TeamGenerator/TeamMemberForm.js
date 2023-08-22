@@ -1,11 +1,11 @@
 import React, {useState } from "react";
 
-const TeamMemberForm = (props) => {
+const TeamMemberForm = ({ addMember }) => {
     const [name, setName] = useState("")
 
     function handleSubmit(e) {
         e.preventDefault();
-        props.addMember(name);
+        addMember(name);
         setName("");
     }
 

@@ -6,6 +6,7 @@ export const TOOLS = [
     {
         id: 0,
         name: 'Team Generator',
+        path: '/Team-Generator',
         title: 'Build your teams!',
         image: TeamImg,
         description:
@@ -14,6 +15,7 @@ export const TOOLS = [
     {
         id: 1,
         name: 'Bracket Generator',
+        path: '/Bracket-Generator',
         title: 'Set up the match!',
         image: BracketImg,
         description:
@@ -22,6 +24,7 @@ export const TOOLS = [
     {
         id: 2,
         name: 'Coin Toss',
+        path: '/Coin-Toss',
         title: 'Flip a coin!',
         image: CoinTossImg,
         description:

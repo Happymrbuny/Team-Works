@@ -1,8 +1,8 @@
 import { Button, Card, CardHeader, CardBody, CardImg, CardText, CardTitle} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const ToolCard = ({tool}) => {
-    const { name, path, image, title, description } = tool
+const ScoreboardCard = ({scoreboard}) => {
+    const { name, path, image, title, description } = scoreboard
     return(
         <Card>
             <CardHeader>{name}</CardHeader>
@@ -20,4 +20,4 @@ const ToolCard = ({tool}) => {
     );
 };
 
-export default ToolCard;
+export default ScoreboardCard;

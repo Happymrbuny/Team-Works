@@ -2,20 +2,14 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1,
-h2,
-h3,
-.card-body > .card-title {
-  font-family: 'Lobster', cursive;
-}
-
 .card-title {
   font-weight: 500;
   font-size: 1.25rem;
 }
 
 h2 {
-  color: red;
+  color: black;
+  margin-left: 2rem;
 }
 
 .card-img-overlay .card-title {
@@ -30,7 +24,7 @@ h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(blue), green);
+  background-image: linear-gradient(gold, black);
   padding: 20px 0;
   margin-top: 2rem;
 }
@@ -72,4 +66,8 @@ h2 {
 .page-exit-active {
   opacity: 0;
   transition: 300ms ease-in;
+}
+
+.ml-2 {
+  margin-left: 2rem;
 }
